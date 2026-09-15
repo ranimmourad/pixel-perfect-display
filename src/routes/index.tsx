@@ -124,25 +124,18 @@ function Index() {
             height={912}
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <span className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
+          {/* Removed the heavy dark overlay to fix the "blurry" look */}
+          <span className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
           <div className="relative mx-auto max-w-3xl px-5 py-16 text-center sm:py-24">
+            {/* Made logo bigger (w-64 sm:w-72) and lifted it up (-mt-10) */}
             <img
               src={logo}
               alt="Logo Cactopia"
-              width={220}
-              height={220}
-              className="mx-auto w-40 rounded-3xl sm:w-52"
+              width={300}
+              height={300}
+              className="mx-auto w-64 rounded-3xl sm:w-72 -mt-10"
             />
-            <p className="mt-6 text-[0.7rem] uppercase tracking-[0.3em] text-primary/80">
-              Notre Menu
-            </p>
-            <h1 className="mt-3 font-display text-4xl leading-tight text-primary sm:text-5xl">
-              Une oasis de saveurs à Boumhel
-            </h1>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Cafés de caractère, boissons glacées et crêpes gourmandes, servis à
-              l'ombre de nos cactus.
-            </p>
+            {/* Removed hero text here */}
             <button
               type="button"
               onClick={() => scrollTo("categories")}
