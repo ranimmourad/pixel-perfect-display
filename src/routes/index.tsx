@@ -63,15 +63,16 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
+      {/* Widened header to max-w-7xl and made logo bigger on desktop */}
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur">
-        <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-1.5">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-1.5 sm:px-6 sm:py-2">
           <a href="#top" className="flex min-w-0 items-center justify-start">
             <img
               src={logo}
               alt="Cactopia"
-              width={56}
-              height={56}
-              className="h-14 w-14 shrink-0 rounded-full object-cover"
+              width={80}
+              height={80}
+              className="h-14 w-14 shrink-0 rounded-full object-cover sm:h-20 sm:w-20"
             />
           </a>
           <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
@@ -79,7 +80,7 @@ function Index() {
             Boumhel
           </span>
         </div>
-        <div className="mx-auto max-w-5xl px-4 pb-3">
+        <div className="mx-auto max-w-7xl px-4 pb-3 sm:px-6">
           <label className="relative block">
             <span className="sr-only">Rechercher un produit</span>
             <Search
@@ -96,7 +97,7 @@ function Index() {
         </div>
         <nav
           aria-label="Catégories"
-          className="mx-auto max-w-5xl overflow-x-auto px-4 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mx-auto max-w-7xl overflow-x-auto px-4 pb-3 sm:px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <ul className="flex gap-2">
             {categories.map((c) => (
@@ -121,24 +122,21 @@ function Index() {
             alt="Cactus dans le désert au coucher du soleil"
             width={1600}
             height={912}
-            // Added object-top for desktop so the sky isn't cropped out
             className="absolute inset-0 h-full w-full object-cover object-center sm:object-top"
           />
           <span className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
-          {/* Added flex and min-h for desktop to space the logo (top) and button (bottom) perfectly */}
-          <div className="relative mx-auto max-w-3xl px-5 pt-4 pb-24 text-center sm:flex sm:flex-col sm:items-center sm:justify-between sm:min-h-[70vh] sm:pt-16 sm:pb-16">
+          {/* Widened hero text container slightly to max-w-5xl */}
+          <div className="relative mx-auto max-w-5xl px-5 pt-4 pb-24 text-center sm:flex sm:flex-col sm:items-center sm:justify-between sm:min-h-[70vh] sm:pt-16 sm:pb-16">
             <img
               src={logo}
               alt="Logo Cactopia"
               width={150}
               height={150}
-              // Slightly bigger on desktop, removed the forced gap on desktop (sm:mb-0)
               className="mx-auto w-28 rounded-3xl sm:w-36 mb-40 sm:mb-0"
             />
             <button
               type="button"
               onClick={() => scrollTo("categories")}
-              // Removed forced margin top on desktop (sm:mt-0)
               className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-primary/90 sm:mt-0"
             >
               Découvrir le menu
@@ -146,7 +144,8 @@ function Index() {
           </div>
         </section>
 
-        <section id="categories" className="mx-auto max-w-5xl scroll-mt-40 px-4 py-12">
+        {/* Widened categories to max-w-7xl */}
+        <section id="categories" className="mx-auto max-w-7xl scroll-mt-40 px-4 py-12 sm:px-6">
           <h2 className="font-display text-2xl text-primary sm:text-3xl">Catégories</h2>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {categories.map((c) => (
@@ -155,7 +154,8 @@ function Index() {
           </div>
         </section>
 
-        <div className="mx-auto max-w-3xl space-y-8 px-4 pb-20">
+        {/* Widened menu items to max-w-5xl */}
+        <div className="mx-auto max-w-5xl space-y-8 px-4 pb-20 sm:px-6">
           {q ? (
             <p className="text-sm text-muted-foreground">
               {filtered.reduce((n, c) => n + c.items.length, 0)} résultat(s) pour «{" "}
@@ -173,7 +173,7 @@ function Index() {
         </div>
       </main>
 
-      <footer className="border-t border-border/70 px-4 py-10 text-center">
+      <footer className="border-t border-border/70 px-4 py-10 text-center sm:px-6">
         <p className="font-display text-xl text-primary">Cactopia</p>
         <p className="mt-2 text-sm text-muted-foreground">Boumhel, Tunisie</p>
         <p className="mt-1 text-xs text-muted-foreground">
