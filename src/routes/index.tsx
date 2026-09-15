@@ -124,18 +124,19 @@ function Index() {
             height={912}
             className="absolute inset-0 h-full w-full object-cover"
           />
-          {/* Removed the heavy dark overlay to fix the "blurry" look */}
+          {/* Kept the overlay light so the image is sharp */}
           <span className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
-          <div className="relative mx-auto max-w-3xl px-5 py-16 text-center sm:py-24">
-            {/* Made logo bigger (w-64 sm:w-72) and lifted it up (-mt-10) */}
+          {/* Changed padding to pt-8 to push logo into the sky, and added pb-24 for the bottom space */}
+          <div className="relative mx-auto max-w-3xl px-5 pt-8 pb-24 text-center sm:pt-12 sm:pb-32">
+            {/* Made logo smaller (w-24) and added mb-40 to push the button down into the garden area */}
             <img
               src={logo}
               alt="Logo Cactopia"
-              width={300}
-              height={300}
-              className="mx-auto w-64 rounded-3xl sm:w-72 -mt-10"
+              width={150}
+              height={150}
+              className="mx-auto w-24 rounded-3xl sm:w-28 mb-40"
             />
-            {/* Removed hero text here */}
+            {/* Removed hero text here, kept the button */}
             <button
               type="button"
               onClick={() => scrollTo("categories")}
