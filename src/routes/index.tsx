@@ -71,7 +71,6 @@ function Index() {
               alt="Cactopia"
               width={96}
               height={96}
-              // Made navbar logo much bigger (h-24 w-24)
               className="h-24 w-24 shrink-0 rounded-full object-cover sm:h-24 sm:w-24"
             />
           </a>
@@ -125,14 +124,15 @@ function Index() {
             className="absolute inset-0 h-full w-full object-cover object-center sm:object-top"
           />
           <span className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
-          <div className="relative mx-auto max-w-5xl px-5 pt-2 pb-24 text-center sm:flex sm:flex-col sm:items-center sm:justify-between sm:min-h-[70vh] sm:pt-16 sm:pb-16">
+          {/* Reduced desktop top padding to sm:pt-8 to lift the logo higher */}
+          <div className="relative mx-auto max-w-5xl px-5 pt-2 pb-24 text-center sm:flex sm:flex-col sm:items-center sm:justify-between sm:min-h-[70vh] sm:pt-8 sm:pb-16">
             <img
               src={logo}
               alt="Logo Cactopia"
               width={192}
               height={192}
-              // Made hero logo much bigger (w-40 mobile, sm:w-48 desktop) and increased margin to push button lower (mb-60)
-              className="mx-auto w-40 rounded-3xl sm:w-48 mb-60 sm:mb-0"
+              // Made mobile logo bigger (w-44) and increased margin to keep button low (mb-64)
+              className="mx-auto w-44 rounded-3xl sm:w-48 mb-64 sm:mb-0"
             />
             <button
               type="button"
