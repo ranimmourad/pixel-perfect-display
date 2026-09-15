@@ -64,16 +64,17 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur">
-        <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3">
-          <a href="#top" className="flex min-w-0 items-center gap-2">
+        {/* Changed py-3 to py-1.5 to make the logo fill the navbar height */}
+        <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-1.5">
+          {/* Removed the text name, centered the larger logo */}
+          <a href="#top" className="flex min-w-0 items-center justify-start">
             <img
               src={logo}
               alt="Cactopia"
-              width={40}
-              height={40}
-              className="h-10 w-10 shrink-0 rounded-full object-cover"
+              width={56}
+              height={56}
+              className="h-14 w-14 shrink-0 rounded-full object-cover"
             />
-            <span className="truncate font-display text-lg text-primary">Cactopia</span>
           </a>
           <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
             <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
@@ -126,15 +127,15 @@ function Index() {
           />
           {/* Kept the overlay light so the image is sharp */}
           <span className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
-          {/* Changed padding to pt-8 to push logo into the sky, and added pb-24 for the bottom space */}
-          <div className="relative mx-auto max-w-3xl px-5 pt-8 pb-24 text-center sm:pt-12 sm:pb-32">
-            {/* Made logo smaller (w-24) and added mb-40 to push the button down into the garden area */}
+          {/* Changed padding to pt-4 to push logo higher into the sky */}
+          <div className="relative mx-auto max-w-3xl px-5 pt-4 pb-24 text-center sm:pt-6 sm:pb-32">
+            {/* Made logo slightly bigger (w-28) and kept large margin to push button down */}
             <img
               src={logo}
               alt="Logo Cactopia"
               width={150}
               height={150}
-              className="mx-auto w-24 rounded-3xl sm:w-28 mb-40"
+              className="mx-auto w-28 rounded-3xl sm:w-32 mb-40"
             />
             {/* Removed hero text here, kept the button */}
             <button
