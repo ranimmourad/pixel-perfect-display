@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowUp, MapPin, Search } from "lucide-react";
-import logo from "@/assets/cactopia-logo.jpg.asset.json";
+import logo from "@/assets/cactopia-logo.jpg";
+import { CactusDivider } from "@/components/menu/CactusDecor";
 import hero from "@/assets/hero-desert.jpg";
 import { categories, formatPrice } from "@/data/menu";
 import { CategoryCard } from "@/components/menu/CategoryCard";
