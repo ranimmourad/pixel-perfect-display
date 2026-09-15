@@ -1,4 +1,5 @@
 import { formatPrice, type MenuCategory, type MenuItem } from "@/data/menu";
+import { CactusDecor } from "./CactusDecor";
 
 function Row({ item }: { item: MenuItem }) {
   return (
