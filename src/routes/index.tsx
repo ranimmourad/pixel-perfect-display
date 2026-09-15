@@ -63,16 +63,16 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
-      {/* Widened header to max-w-7xl and made logo bigger on desktop */}
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-1.5 sm:px-6 sm:py-2">
           <a href="#top" className="flex min-w-0 items-center justify-start">
             <img
               src={logo}
               alt="Cactopia"
-              width={80}
-              height={80}
-              className="h-14 w-14 shrink-0 rounded-full object-cover sm:h-20 sm:w-20"
+              width={64}
+              height={64}
+              // Made mobile logo bigger (h-16 w-16)
+              className="h-16 w-16 shrink-0 rounded-full object-cover sm:h-20 sm:w-20"
             />
           </a>
           <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
@@ -125,14 +125,14 @@ function Index() {
             className="absolute inset-0 h-full w-full object-cover object-center sm:object-top"
           />
           <span className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
-          {/* Widened hero text container slightly to max-w-5xl */}
           <div className="relative mx-auto max-w-5xl px-5 pt-4 pb-24 text-center sm:flex sm:flex-col sm:items-center sm:justify-between sm:min-h-[70vh] sm:pt-16 sm:pb-16">
             <img
               src={logo}
               alt="Logo Cactopia"
-              width={150}
-              height={150}
-              className="mx-auto w-28 rounded-3xl sm:w-36 mb-40 sm:mb-0"
+              width={128}
+              height={128}
+              // Made mobile hero logo slightly bigger (w-32) and adjusted margin to keep button in place (mb-44)
+              className="mx-auto w-32 rounded-3xl sm:w-36 mb-44 sm:mb-0"
             />
             <button
               type="button"
@@ -144,7 +144,6 @@ function Index() {
           </div>
         </section>
 
-        {/* Widened categories to max-w-7xl */}
         <section id="categories" className="mx-auto max-w-7xl scroll-mt-40 px-4 py-12 sm:px-6">
           <h2 className="font-display text-2xl text-primary sm:text-3xl">Catégories</h2>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
@@ -154,7 +153,6 @@ function Index() {
           </div>
         </section>
 
-        {/* Widened menu items to max-w-5xl */}
         <div className="mx-auto max-w-5xl space-y-8 px-4 pb-20 sm:px-6">
           {q ? (
             <p className="text-sm text-muted-foreground">
