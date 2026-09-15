@@ -1,4 +1,5 @@
 import type { MenuCategory } from "@/data/menu";
+import { CactusDecor } from "./CactusDecor";
 
 export function CategoryCard({
   category,
@@ -19,17 +20,18 @@ export function CategoryCard({
         loading="lazy"
         width={928}
         height={720}
-        className="h-44 w-full object-cover sm:h-52"
+        className="h-36 w-full object-cover sm:h-52"
       />
-      <span className="absolute inset-0 bg-gradient-to-t from-foreground/75 via-foreground/15 to-transparent" />
-      <span className="absolute inset-x-0 bottom-0 p-4">
-        <span className="block text-[0.68rem] uppercase tracking-[0.22em] text-primary-foreground/70">
+      <span className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+      <CactusDecor className="pointer-events-none absolute right-2.5 top-2.5 h-9 w-6 text-primary-foreground/30 sm:h-11 sm:w-8" />
+      <span className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
+        <span className="block text-[0.6rem] uppercase tracking-[0.18em] text-primary-foreground/70 sm:text-[0.68rem] sm:tracking-[0.22em]">
           {category.group}
         </span>
-        <span className="mt-1 block font-display text-xl text-primary-foreground">
+        <span className="mt-1 block font-display text-base leading-tight text-primary-foreground sm:text-xl">
           {category.name}
         </span>
-        <span className="mt-0.5 block text-xs text-primary-foreground/75">
+        <span className="mt-0.5 block text-[0.7rem] text-primary-foreground/75 sm:text-xs">
           {category.items.length} article{category.items.length > 1 ? "s" : ""}
         </span>
       </span>

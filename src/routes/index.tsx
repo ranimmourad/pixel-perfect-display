@@ -67,7 +67,7 @@ function Index() {
         <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3">
           <a href="#top" className="flex min-w-0 items-center gap-2">
             <img
-              src={logo.url}
+              src={logo}
               alt="Cactopia"
               width={40}
               height={40}
@@ -127,7 +127,7 @@ function Index() {
           <span className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
           <div className="relative mx-auto max-w-3xl px-5 py-16 text-center sm:py-24">
             <img
-              src={logo.url}
+              src={logo}
               alt="Logo Cactopia"
               width={220}
               height={220}
@@ -155,7 +155,7 @@ function Index() {
 
         <section id="categories" className="mx-auto max-w-5xl scroll-mt-40 px-4 py-12">
           <h2 className="font-display text-2xl text-primary sm:text-3xl">Catégories</h2>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {categories.map((c) => (
               <CategoryCard key={c.id} category={c} onSelect={scrollTo} />
             ))}
