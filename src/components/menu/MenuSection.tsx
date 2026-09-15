@@ -41,8 +41,7 @@ export function MenuSection({ category }: { category: MenuCategory }) {
               {category.name}
             </h2>
           </div>
-        </div>
-        <CactusDecor className="pointer-events-none absolute -bottom-2 right-4 h-16 w-11 text-primary-foreground/25 sm:h-20 sm:w-14" />
+          <CactusDecor className="pointer-events-none absolute -bottom-2 right-4 h-16 w-11 text-primary-foreground/25 sm:h-20 sm:w-14" />
         </div>
         <ul className="relative px-5 pb-5 pt-2 sm:px-7">
           <CactusDecor className="pointer-events-none absolute -right-3 bottom-4 h-24 w-16 text-primary/[0.07]" />
