@@ -64,9 +64,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur">
-        {/* Changed py-3 to py-1.5 to make the logo fill the navbar height */}
         <div className="mx-auto grid max-w-5xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-1.5">
-          {/* Removed the text name, centered the larger logo */}
           <a href="#top" className="flex min-w-0 items-center justify-start">
             <img
               src={logo}
@@ -123,25 +121,25 @@ function Index() {
             alt="Cactus dans le désert au coucher du soleil"
             width={1600}
             height={912}
-            className="absolute inset-0 h-full w-full object-cover"
+            // Added object-top for desktop so the sky isn't cropped out
+            className="absolute inset-0 h-full w-full object-cover object-center sm:object-top"
           />
-          {/* Kept the overlay light so the image is sharp */}
           <span className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/10 to-background/10" />
-          {/* Changed padding to pt-4 to push logo higher into the sky */}
-          <div className="relative mx-auto max-w-3xl px-5 pt-4 pb-24 text-center sm:pt-6 sm:pb-32">
-            {/* Made logo slightly bigger (w-28) and kept large margin to push button down */}
+          {/* Added flex and min-h for desktop to space the logo (top) and button (bottom) perfectly */}
+          <div className="relative mx-auto max-w-3xl px-5 pt-4 pb-24 text-center sm:flex sm:flex-col sm:items-center sm:justify-between sm:min-h-[70vh] sm:pt-16 sm:pb-16">
             <img
               src={logo}
               alt="Logo Cactopia"
               width={150}
               height={150}
-              className="mx-auto w-28 rounded-3xl sm:w-32 mb-40"
+              // Slightly bigger on desktop, removed the forced gap on desktop (sm:mb-0)
+              className="mx-auto w-28 rounded-3xl sm:w-36 mb-40 sm:mb-0"
             />
-            {/* Removed hero text here, kept the button */}
             <button
               type="button"
               onClick={() => scrollTo("categories")}
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-primary/90"
+              // Removed forced margin top on desktop (sm:mt-0)
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-primary/90 sm:mt-0"
             >
               Découvrir le menu
             </button>
