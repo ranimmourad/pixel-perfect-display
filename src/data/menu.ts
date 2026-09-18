@@ -2,17 +2,17 @@ import cafes from "@/assets/cat-cafes.jpg";
 import chocolats from "@/assets/cat-chocolats.jpg";
 import thes from "@/assets/cat-thes.jpg";
 import iced from "@/assets/cat-iced.jpg";
-import frappuccino from "@/assets/cat-frappuccino.jpg"; // NEW - ADD THIS IMAGE
+import frappuccino from "@/assets/cat-frappuccino.jpg";
 import jus from "@/assets/cat-jus.jpg";
 import boissons from "@/assets/cat-boissons.jpg";
-import paninis from "@/assets/cat-paninis.jpg"; // NEW - ADD THIS IMAGE
-import painPerdu from "@/assets/cat-pain-perdu.jpg"; // NEW - ADD THIS IMAGE
-import pancakes from "@/assets/cat-pancakes.jpg"; // NEW - ADD THIS IMAGE
+import paninis from "@/assets/cat-paninis.jpg";
+import painPerdu from "@/assets/cat-pain-perdu.jpg";
+import pancakes from "@/assets/cat-pancakes.jpg";
 import crepesSucrees from "@/assets/cat-crepes-sucrees.jpg";
 import crepesSalees from "@/assets/cat-crepes-salees.jpg";
-import bruschetta from "@/assets/cat-bruschetta.jpg"; // NEW - ADD THIS IMAGE
-import sandwichs from "@/assets/cat-sandwichs.jpg"; // NEW - ADD THIS IMAGE
-import saladeCesar from "@/assets/cat-salade-cesar.jpg"; // NEW - ADD THIS IMAGE
+import bruschetta from "@/assets/cat-bruschetta.jpg";
+import sandwichs from "@/assets/cat-sandwichs.jpg";
+import saladeCesar from "@/assets/cat-salade-cesar.jpg";
 import omelettes from "@/assets/cat-omelettes.jpg";
 import formules from "@/assets/cat-formules.jpg";
 import supplements from "@/assets/cat-supplements.jpg";
@@ -31,10 +31,6 @@ export type MenuCategory = {
   items: MenuItem[];
 };
 
-/**
- * Source of truth: the official Cactopia menu PDFs.
- * Prices in DT. 
- */
 export const categories: MenuCategory[] = [
   {
     id: "cafes",
@@ -99,7 +95,7 @@ export const categories: MenuCategory[] = [
       { name: "Iced Mocha", price: 8.5 },
       { name: "Iced Chocolate", price: 8.0 },
       { name: "Expresso tonic", price: 8.0 },
-      { name: "Expresso sprite", price: 8.0 },
+      { name: "Expresso Sprite", price: 8.0 },
     ],
   },
   {
@@ -146,7 +142,7 @@ export const categories: MenuCategory[] = [
   {
     id: "paninis",
     name: "Paninis",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: paninis,
     items: [
       { name: "Thon fromage", price: 12.0 },
@@ -157,19 +153,19 @@ export const categories: MenuCategory[] = [
   {
     id: "pain-perdu",
     name: "Pain Perdu",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: painPerdu,
     items: [
       { name: "Classique", price: 10.0, description: "Chocolat, boule de glace, amandes concassées, fruits de saison" },
       { name: "Nutella", price: 14.0, description: "Nutella, boule de glace, amandes concassées, fruits de saison" },
       { name: "Caramel Beurre Salé", price: 10.0, description: "Caramel beurre salé, boule de glace, amandes concassées" },
-      { name: "Couple cactus", price: 20.0, description: "Caramel beurre salé, chocolat, 2 boules de glace, amandes concassées" },
+      { name: "Duo cactus", price: 20.0, description: "Caramel beurre salé, chocolat, 2 boules de glace, amandes concassées" },
     ],
   },
   {
     id: "pancakes",
     name: "Pancakes",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: pancakes,
     items: [
       { name: "Miel", price: 8.0 },
@@ -182,7 +178,7 @@ export const categories: MenuCategory[] = [
   {
     id: "crepes-gaufres-sucrees",
     name: "Crêpes & Gaufres sucrées",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: crepesSucrees,
     items: [
       { name: "Chocolat", price: 10.0 },
@@ -196,7 +192,7 @@ export const categories: MenuCategory[] = [
   {
     id: "crepes-salees",
     name: "Crêpes salées",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: crepesSalees,
     items: [
       { name: "Thon", price: 11.0 },
@@ -209,17 +205,17 @@ export const categories: MenuCategory[] = [
   {
     id: "bruschetta",
     name: "Bruschetta / Gaufre salée",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: bruschetta,
     items: [
       { name: "Classique", price: 12.0, description: "Sauce blanche, tomates en dés, thon, œuf dur, basilic" },
-      { name: "Hollandaise", price: 16.0, description: "Sauce blanche, thon, 2 œufs bénédicte, saumon fumé & roquette" },
+      { name: "Hollandaise", price: 16.0, description: "Sauce blanche, thon, 2 œufs bénédicte, saumon fumé, roquette" },
     ],
   },
   {
     id: "sandwichs",
     name: "Sandwichs",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: sandwichs,
     items: [
       { name: "Poulet", price: 8.0 },
@@ -229,25 +225,25 @@ export const categories: MenuCategory[] = [
   {
     id: "salade-cesar",
     name: "Salade César",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: saladeCesar,
     items: [
-      { name: "Salade César", price: 10.0, description: "Laitue • Tomates cerises • Poulet • Croûtons • Œuf dure • Maïs • Fromage en cubes" },
+      { name: "Salade César", price: 10.0, description: "Laitue, Tomates cerises, Poulet, Croûtons, Œuf dure, Maïs, Fromage en cubes" },
     ],
   },
   {
     id: "omelettes",
     name: "Omelettes",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: omelettes,
     items: [
-      { name: "Omelette pure beurre", price: 10.0, description: "3 œufs, charcuterie & fromage, toast" },
+      { name: "Omelette au beurre", price: 10.0, description: "3 œufs, charcuterie, fromage, toast" },
     ],
   },
   {
     id: "supplements",
     name: "Suppléments",
-    group: "Nourritures",
+    group: "Sucré et salé",
     image: supplements,
     items: [
       { name: "Œuf", price: 2.0 },
@@ -280,25 +276,25 @@ export const categories: MenuCategory[] = [
         name: "Power Cactus",
         price: 25.0,
         description:
-          "Café, jus de fraise ou citronnade ou orange, charcuterie & fromage, omelette, bruschetta classique, eau 0,5 L",
+          "Café, jus de fraise ou citronnade ou orange, charcuterie, fromage, omelette, bruschetta classique, eau 0,5 L",
       },
       {
         name: "Healthy green",
         price: 25.0,
         description:
-          "Café, fresh detox, yaourt bowl au granola, 2 œufs durs crudités, charcuterie & fromages, toast complet, avocat, pancake au miel",
+          "Café, fresh detox, yaourt bowl au granola, 2 œufs durs crudités, charcuterie, fromages, toast complet, avocat, pancake au miel",
       },
       {
         name: "Duo",
         price: 45.0,
         description:
-          "2 cafés, 2 jus de fraise ou citronnade ou orange, 2 viennoiseries, pain perdu (ou pancake au chocolat), 2 yaourts bowl au granola et fruits, bruschetta hollandaise, charcuterie & fromages, omelette, chocolat miel beurre, eau 1 L",
+          "2 cafés, 2 jus de fraise ou citronnade ou orange, 2 viennoiseries, pain perdu (ou pancake au chocolat), 2 yaourts bowl au granola et fruits, bruschetta hollandaise, charcuterie, fromages, omelette, chocolat miel beurre, eau 1 L",
       },
       {
         name: "Quad cactus",
         price: 85.0,
         description:
-          "4 cafés, 4 jus de fraise ou citronnade ou orange, 4 viennoiseries, pain perdu et pancake au chocolat, 4 yaourts bowl au granola, 2 bruschetta hollandaises, charcuterie & fromages, 2 omelettes, chocolat miel beurre, 2 bouteilles d'eau 1 L",
+          "4 cafés, 4 jus de fraise ou citronnade ou orange, 4 viennoiseries, pain perdu et pancake au chocolat, 4 yaourts bowl au granola, 2 bruschetta hollandaises, charcuterie, fromages, 2 omelettes, chocolat miel beurre, 2 bouteilles d'eau 1 L",
       },
       {
         name: "Happy kiddos",
@@ -310,6 +306,5 @@ export const categories: MenuCategory[] = [
   },
 ];
 
-// Updated to display exactly 1 decimal place (e.g., 4.0 DT, 4.5 DT) as requested
 export const formatPrice = (price: number) =>
   `${price.toFixed(1)} DT`;
