@@ -2,12 +2,18 @@ import cafes from "@/assets/cat-cafes.jpg";
 import chocolats from "@/assets/cat-chocolats.jpg";
 import thes from "@/assets/cat-thes.jpg";
 import iced from "@/assets/cat-iced.jpg";
+import frappuccino from "@/assets/cat-frappuccino.jpg"; // NEW - ADD THIS IMAGE
 import jus from "@/assets/cat-jus.jpg";
 import boissons from "@/assets/cat-boissons.jpg";
-import crepesSalees from "@/assets/cat-crepes-salees.jpg";
+import paninis from "@/assets/cat-paninis.jpg"; // NEW - ADD THIS IMAGE
+import painPerdu from "@/assets/cat-pain-perdu.jpg"; // NEW - ADD THIS IMAGE
+import pancakes from "@/assets/cat-pancakes.jpg"; // NEW - ADD THIS IMAGE
 import crepesSucrees from "@/assets/cat-crepes-sucrees.jpg";
+import crepesSalees from "@/assets/cat-crepes-salees.jpg";
+import bruschetta from "@/assets/cat-bruschetta.jpg"; // NEW - ADD THIS IMAGE
+import sandwichs from "@/assets/cat-sandwichs.jpg"; // NEW - ADD THIS IMAGE
+import saladeCesar from "@/assets/cat-salade-cesar.jpg"; // NEW - ADD THIS IMAGE
 import omelettes from "@/assets/cat-omelettes.jpg";
-import viennoiseries from "@/assets/cat-viennoiseries.jpg";
 import formules from "@/assets/cat-formules.jpg";
 import supplements from "@/assets/cat-supplements.jpg";
 
@@ -27,7 +33,7 @@ export type MenuCategory = {
 
 /**
  * Source of truth: the official Cactopia menu PDFs.
- * Prices in DT. Obvious typos corrected (amandes, fromage, Omelettes, Dessert).
+ * Prices in DT. 
  */
 export const categories: MenuCategory[] = [
   {
@@ -36,13 +42,14 @@ export const categories: MenuCategory[] = [
     group: "Boissons chaudes",
     image: cafes,
     items: [
-      { name: "Espresso", price: 4 },
-      { name: "Double Espresso", price: 6 },
-      { name: "Americano", price: 5 },
-      { name: "Capucin", price: 5 },
-      { name: "Latte coffee", price: 6 },
+      { name: "Espresso", price: 4.5 },
+      { name: "Double Espresso", price: 6.0 },
+      { name: "Americano", price: 5.0 },
+      { name: "Capucin", price: 5.0 },
+      { name: "Latte coffee", price: 6.0 },
       { name: "Nescafé au lait", price: 5.5 },
-      { name: "Café turc", price: 10 },
+      { name: "Café turc", price: 10.0 },
+      { name: "Affogato vanilla", price: 14.0 },
     ],
   },
   {
@@ -51,8 +58,8 @@ export const categories: MenuCategory[] = [
     group: "Boissons chaudes",
     image: chocolats,
     items: [
-      { name: "Chocolat au lait", price: 5 },
-      { name: "Chocolat chaud", price: 6 },
+      { name: "Chocolat au lait", price: 4.0 },
+      { name: "Chocolat chaud", price: 6.0 },
     ],
   },
   {
@@ -61,11 +68,24 @@ export const categories: MenuCategory[] = [
     group: "Boissons chaudes",
     image: thes,
     items: [
-      { name: "Thé à la menthe fraîche", price: 4 },
-      { name: "Thé aux amandes", price: 7 },
-      { name: "Thé aux pignons", price: 12 },
-      { name: "Camomille ou Verveine", price: 5 },
-      { name: "Thé vert KYUFI", price: 5 },
+      { name: "Thé à la menthe fraîche", price: 4.0 },
+      { name: "Thé aux amandes", price: 7.0 },
+      { name: "Thé aux pignons", price: 12.0 },
+      { name: "Infusion Camomille", price: 4.0 },
+      { name: "Infusion Verveine", price: 4.0 },
+      { name: "Thé vert KYUFI", price: 5.0 },
+    ],
+  },
+  {
+    id: "supplements-boissons",
+    name: "Suppléments boissons",
+    group: "Boissons chaudes",
+    image: supplements,
+    items: [
+      { name: "Nestlé", price: 3.0 },
+      { name: "Arôme Noisette", price: 3.0 },
+      { name: "Arôme Caramel", price: 3.0 },
+      { name: "Arôme Cookies", price: 3.0 },
     ],
   },
   {
@@ -74,10 +94,26 @@ export const categories: MenuCategory[] = [
     group: "Boissons froides",
     image: iced,
     items: [
-      { name: "Iced Americano", price: 6 },
-      { name: "Iced Latte", price: 7 },
+      { name: "Iced Americano", price: 6.0 },
+      { name: "Iced Latte", price: 7.0 },
       { name: "Iced Mocha", price: 8.5 },
-      { name: "Iced Chocolate", price: 8 },
+      { name: "Iced Chocolate", price: 8.0 },
+      { name: "Expresso tonic", price: 8.0 },
+      { name: "Expresso sprite", price: 8.0 },
+    ],
+  },
+  {
+    id: "frappuccino",
+    name: "Frappuccino",
+    group: "Boissons froides",
+    image: frappuccino,
+    items: [
+      { name: "Classique", price: 10.0 },
+      { name: "Caramel", price: 12.0 },
+      { name: "Vanille", price: 12.0 },
+      { name: "Cookies", price: 12.0 },
+      { name: "Oreo", price: 13.0 },
+      { name: "Nutella", price: 14.0 },
     ],
   },
   {
@@ -86,12 +122,14 @@ export const categories: MenuCategory[] = [
     group: "Boissons froides",
     image: jus,
     items: [
-      { name: "Jus d'orange", price: 6 },
-      { name: "Citronnade", price: 6 },
-      { name: "Citronnade à la menthe", price: 7 },
-      { name: "Citronnade amandes", price: 9 },
-      { name: "Jus de fraise", price: 7 },
-      { name: "Kiwi", price: 10 },
+      { name: "Jus d’orange", price: 6.0 },
+      { name: "Citronnade", price: 6.0 },
+      { name: "Citronnade à la menthe", price: 7.0 },
+      { name: "Jus de fraise", price: 7.0 },
+      { name: "Citronnade amandes", price: 9.0 },
+      { name: "Fruits exotiques", price: 9.0 },
+      { name: "Kiwi", price: 10.0 },
+      { name: "Banane ananas", price: 10.0 },
     ],
   },
   {
@@ -100,22 +138,125 @@ export const categories: MenuCategory[] = [
     group: "Boissons froides",
     image: boissons,
     items: [
-      { name: "Soda (canette)", price: 3 },
+      { name: "Soda (canette)", price: 4.0 },
       { name: "Eau 0.5L", price: 2.5 },
-      { name: "Eau 1L", price: 3.5 },
-      { name: "Eau gazéifiée 1L", price: 3.5 },
+      { name: "Eau 1L", price: 4.0 },
     ],
   },
   {
-    id: "supplements-boissons",
-    name: "Suppléments boissons",
-    group: "Boissons froides",
+    id: "paninis",
+    name: "Paninis",
+    group: "Nourritures",
+    image: paninis,
+    items: [
+      { name: "Thon fromage", price: 12.0 },
+      { name: "Jambon fromage", price: 12.0 },
+      { name: "Poulet fromage", price: 15.0 },
+    ],
+  },
+  {
+    id: "pain-perdu",
+    name: "Pain Perdu",
+    group: "Nourritures",
+    image: painPerdu,
+    items: [
+      { name: "Classique", price: 10.0, description: "Chocolat, boule de glace, amandes concassées, fruits de saison" },
+      { name: "Nutella", price: 14.0, description: "Nutella, boule de glace, amandes concassées, fruits de saison" },
+      { name: "Caramel Beurre Salé", price: 10.0, description: "Caramel beurre salé, boule de glace, amandes concassées" },
+      { name: "Couple cactus", price: 20.0, description: "Caramel beurre salé, chocolat, 2 boules de glace, amandes concassées" },
+    ],
+  },
+  {
+    id: "pancakes",
+    name: "Pancakes",
+    group: "Nourritures",
+    image: pancakes,
+    items: [
+      { name: "Miel", price: 8.0 },
+      { name: "Caramel beurre salé", price: 10.0 },
+      { name: "Chocolat", price: 10.0 },
+      { name: "Spéculos", price: 13.0 },
+      { name: "Nutella", price: 14.0 },
+    ],
+  },
+  {
+    id: "crepes-gaufres-sucrees",
+    name: "Crêpes & Gaufres sucrées",
+    group: "Nourritures",
+    image: crepesSucrees,
+    items: [
+      { name: "Chocolat", price: 10.0 },
+      { name: "Nutella", price: 14.0 },
+      { name: "Spéculos", price: 15.0 },
+      { name: "Pistache", price: 16.0 },
+      { name: "Ferrero", price: 18.0 },
+      { name: "Bueno", price: 18.0 },
+    ],
+  },
+  {
+    id: "crepes-salees",
+    name: "Crêpes salées",
+    group: "Nourritures",
+    image: crepesSalees,
+    items: [
+      { name: "Thon", price: 11.0 },
+      { name: "Jambon", price: 11.0 },
+      { name: "4 fromages", price: 12.0 },
+      { name: "Pepperoni", price: 15.0 },
+      { name: "Poulet champignons", price: 18.0 },
+    ],
+  },
+  {
+    id: "bruschetta",
+    name: "Bruschetta / Gaufre salée",
+    group: "Nourritures",
+    image: bruschetta,
+    items: [
+      { name: "Classique", price: 12.0, description: "Sauce blanche, tomates en dés, thon, œuf dur, basilic" },
+      { name: "Hollandaise", price: 16.0, description: "Sauce blanche, thon, 2 œufs bénédicte, saumon fumé & roquette" },
+    ],
+  },
+  {
+    id: "sandwichs",
+    name: "Sandwichs",
+    group: "Nourritures",
+    image: sandwichs,
+    items: [
+      { name: "Poulet", price: 8.0 },
+      { name: "Cordon bleu", price: 8.0 },
+    ],
+  },
+  {
+    id: "salade-cesar",
+    name: "Salade César",
+    group: "Nourritures",
+    image: saladeCesar,
+    items: [
+      { name: "Salade César", price: 10.0, description: "Laitue • Tomates cerises • Poulet • Croûtons • Œuf dure • Maïs • Fromage en cubes" },
+    ],
+  },
+  {
+    id: "omelettes",
+    name: "Omelettes",
+    group: "Nourritures",
+    image: omelettes,
+    items: [
+      { name: "Omelette pure beurre", price: 10.0, description: "3 œufs, charcuterie & fromage, toast" },
+    ],
+  },
+  {
+    id: "supplements",
+    name: "Suppléments",
+    group: "Nourritures",
     image: supplements,
     items: [
-      { name: "Sirop menthe", price: 1.5 },
-      { name: "Nestlé", price: 3 },
-      { name: "Noisette", price: 3 },
-      { name: "Caramel", price: 3 },
+      { name: "Œuf", price: 2.0 },
+      { name: "Champignons", price: 2.0 },
+      { name: "Amandes effilées", price: 3.0 },
+      { name: "Noisettes concassées", price: 3.5 },
+      { name: "Fromage", price: 3.0 },
+      { name: "Jambon", price: 3.0 },
+      { name: "Thon", price: 3.5 },
     ],
   },
   {
@@ -125,72 +266,50 @@ export const categories: MenuCategory[] = [
     image: formules,
     items: [
       {
-        name: "Morning Cactus",
-        price: 10,
-        description: "Un café au choix, une viennoiserie et une bouteille d'eau 0,5L.",
+        name: "Cactus start",
+        price: 12.0,
+        description: "Café, jus de fraise ou citronnade ou orange, viennoiseries, eau 0,5 L",
       },
       {
-        name: "Sweet Oasis",
-        price: 18,
+        name: "Sweet Cactus",
+        price: 22.0,
         description:
-          "Un café au choix, pancakes au chocolat, une bouteille d'eau 0,5L et un jus.",
+          "Café, jus de fraise ou citronnade ou orange, pain perdu (ou pancake au chocolat), viennoiseries, yaourt bowl au granola, chocolat miel beurre, eau 0,5 L",
       },
       {
-        name: "Power Dessert",
-        price: 25,
+        name: "Power Cactus",
+        price: 25.0,
         description:
-          "Un café au choix, une viennoiserie, une bouteille d'eau 0,5L, une omelette et un jus.",
+          "Café, jus de fraise ou citronnade ou orange, charcuterie & fromage, omelette, bruschetta classique, eau 0,5 L",
       },
-    ],
-  },
-  {
-    id: "crepes-salees",
-    name: "Crêpes salées",
-    group: "Desserts & nourritures",
-    image: crepesSalees,
-    items: [
-      { name: "Thon fromage", price: 11 },
-      { name: "Jambon fromage", price: 11 },
-      { name: "Spéciale", price: 15, description: "Jambon, champignons, œuf." },
-    ],
-  },
-  {
-    id: "crepes-gaufres-sucrees",
-    name: "Crêpes & Gaufres sucrées",
-    group: "Desserts & nourritures",
-    image: crepesSucrees,
-    items: [
-      { name: "Chocolat", price: 9 },
-      { name: "Nutella", price: 13 },
-      { name: "Ferrero Rocher", price: 16 },
-    ],
-  },
-  {
-    id: "omelettes",
-    name: "Omelettes",
-    group: "Desserts & nourritures",
-    image: omelettes,
-    items: [{ name: "Omelette au beurre", price: 9 }],
-  },
-  {
-    id: "viennoiseries",
-    name: "Viennoiseries",
-    group: "Desserts & nourritures",
-    image: viennoiseries,
-    items: [{ name: "Croissant / Pain au chocolat", price: 4 }],
-  },
-  {
-    id: "supplements",
-    name: "Suppléments",
-    group: "Desserts & nourritures",
-    image: supplements,
-    items: [
-      { name: "Amandes effilées", price: 2 },
-      { name: "Noisettes concassées", price: 2.5 },
-      { name: "Pistaches concassées", price: 4 },
+      {
+        name: "Healthy green",
+        price: 25.0,
+        description:
+          "Café, fresh detox, yaourt bowl au granola, 2 œufs durs crudités, charcuterie & fromages, toast complet, avocat, pancake au miel",
+      },
+      {
+        name: "Duo",
+        price: 45.0,
+        description:
+          "2 cafés, 2 jus de fraise ou citronnade ou orange, 2 viennoiseries, pain perdu (ou pancake au chocolat), 2 yaourts bowl au granola et fruits, bruschetta hollandaise, charcuterie & fromages, omelette, chocolat miel beurre, eau 1 L",
+      },
+      {
+        name: "Quad cactus",
+        price: 85.0,
+        description:
+          "4 cafés, 4 jus de fraise ou citronnade ou orange, 4 viennoiseries, pain perdu et pancake au chocolat, 4 yaourts bowl au granola, 2 bruschetta hollandaises, charcuterie & fromages, 2 omelettes, chocolat miel beurre, 2 bouteilles d'eau 1 L",
+      },
+      {
+        name: "Happy kiddos",
+        price: 10.0,
+        description:
+          "Chocolat au lait, œuf dure, mini pancake au chocolat, eau 0,5 L",
+      },
     ],
   },
 ];
 
+// Updated to display exactly 1 decimal place (e.g., 4.0 DT, 4.5 DT) as requested
 export const formatPrice = (price: number) =>
-  `${price.toFixed(price % 1 === 0 ? 1 : 1)} DT`;
+  `${price.toFixed(1)} DT`;
