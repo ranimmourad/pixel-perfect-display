@@ -79,8 +79,8 @@ export const categories: MenuCategory[] = [
     items: [
       { name: "Nestlé", price: 2.5 }, // Price updated
       { name: "Arôme Noisette", price: 2.5 }, // Price updated
-      { name: "Arôme Caramel", price: 2.5 }, // Price updated
-      { name: "Arôme Cookies", price: 3.0 },
+      { name: "Arôme Caramel", price: 3.0 },
+      { name: "Arôme Cookies", price: 2.5 },
     ],
   },
   {
@@ -183,7 +183,7 @@ export const categories: MenuCategory[] = [
       { name: "Chocolat", price: 10.0 },
       { name: "Nutella", price: 14.0 },
       { name: "Spéculos", price: 15.0 },
-      { name: "Pistache", price: 16.0 },
+      { name: "Pistache", price: 20.0 },
       { name: "Ferrero", price: 18.0 },
       { name: "Bueno", price: 18.0 },
     ],
