@@ -11,8 +11,7 @@ import pancakes from "@/assets/cat-pancakes.jpg";
 import crepesSucrees from "@/assets/cat-crepes-sucrees.jpg";
 import crepesSalees from "@/assets/cat-crepes-salees.jpg";
 import bruschetta from "@/assets/cat-bruschetta.jpg";
-import sandwichs from "@/assets/cat-sandwichs.jpg";
-import saladeCesar from "@/assets/cat-salade-cesar.jpg";
+// Removed sandwichs and saladeCesar imports
 import omelettes from "@/assets/cat-omelettes.jpg";
 import formules from "@/assets/cat-formules.jpg";
 import supplements from "@/assets/cat-supplements.jpg";
@@ -78,9 +77,9 @@ export const categories: MenuCategory[] = [
     group: "Boissons chaudes",
     image: supplements,
     items: [
-      { name: "Nestlé", price: 3.0 },
-      { name: "Arôme Noisette", price: 3.0 },
-      { name: "Arôme Caramel", price: 3.0 },
+      { name: "Nestlé", price: 2.5 }, // Price updated
+      { name: "Arôme Noisette", price: 2.5 }, // Price updated
+      { name: "Arôme Caramel", price: 2.5 }, // Price updated
       { name: "Arôme Cookies", price: 3.0 },
     ],
   },
@@ -212,25 +211,7 @@ export const categories: MenuCategory[] = [
       { name: "Hollandaise", price: 16.0, description: "Sauce blanche, thon, 2 œufs bénédicte, saumon fumé, roquette" },
     ],
   },
-  {
-    id: "sandwichs",
-    name: "Sandwichs",
-    group: "Sucré et salé",
-    image: sandwichs,
-    items: [
-      { name: "Poulet", price: 8.0 },
-      { name: "Cordon bleu", price: 8.0 },
-    ],
-  },
-  {
-    id: "salade-cesar",
-    name: "Salade César",
-    group: "Sucré et salé",
-    image: saladeCesar,
-    items: [
-      { name: "Salade César", price: 10.0, description: "Laitue, Tomates cerises, Poulet, Croûtons, Œuf dure, Maïs, Fromage en cubes" },
-    ],
-  },
+  // Sandwichs and Salade César categories completely removed
   {
     id: "omelettes",
     name: "Omelettes",
@@ -268,13 +249,13 @@ export const categories: MenuCategory[] = [
       },
       {
         name: "Sweet Cactus",
-        price: 22.0,
+        price: 25.0, // Price updated
         description:
           "Café, jus de fraise ou citronnade ou orange, pain perdu (ou pancake au chocolat), viennoiseries, yaourt bowl au granola, chocolat miel beurre, eau 0,5 L",
       },
       {
         name: "Power Cactus",
-        price: 25.0,
+        price: 28.0, // Price updated
         description:
           "Café, jus de fraise ou citronnade ou orange, charcuterie, fromage, omelette, bruschetta classique, eau 0,5 L",
       },
@@ -285,14 +266,20 @@ export const categories: MenuCategory[] = [
           "Café, fresh detox, yaourt bowl au granola, 2 œufs durs crudités, charcuterie, fromages, toast complet, avocat, pancake au miel",
       },
       {
+        name: "Traditionnel (pour 2)",
+        price: 45.0, // NEW ITEM
+        description:
+          "2 cafés, 2 drôo bowl, blissa, eau 1 L, oeufs au plat, thon, jambon, fromage, huile d'olive, harissa, miel, mlewi, tabouna",
+      },
+      {
         name: "Duo",
-        price: 45.0,
+        price: 48.0, // Price updated
         description:
           "2 cafés, 2 jus de fraise ou citronnade ou orange, 2 viennoiseries, pain perdu (ou pancake au chocolat), 2 yaourts bowl au granola et fruits, bruschetta hollandaise, charcuterie, fromages, omelette, chocolat miel beurre, eau 1 L",
       },
       {
         name: "Quad cactus",
-        price: 85.0,
+        price: 92.0, // Price updated
         description:
           "4 cafés, 4 jus de fraise ou citronnade ou orange, 4 viennoiseries, pain perdu et pancake au chocolat, 4 yaourts bowl au granola, 2 bruschetta hollandaises, charcuterie, fromages, 2 omelettes, chocolat miel beurre, 2 bouteilles d'eau 1 L",
       },
