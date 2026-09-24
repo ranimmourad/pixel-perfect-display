@@ -37,11 +37,11 @@ export const categories: MenuCategory[] = [
     image: cafes,
     items: [
       { name: "Espresso", price: 4.5 },
-      { name: "Double Espresso", price: 6.0 },
       { name: "Americano", price: 5.0 },
       { name: "Capucin", price: 5.0 },
-      { name: "Latte coffee", price: 6.0 },
       { name: "Nescafé au lait", price: 5.5 },
+      { name: "Double Espresso", price: 6.0 },
+      { name: "Latte coffee", price: 6.0 },
       { name: "Café turc", price: 10.0 },
       { name: "Affogato vanilla", price: 14.0 },
     ],
@@ -63,11 +63,11 @@ export const categories: MenuCategory[] = [
     image: thes,
     items: [
       { name: "Thé à la menthe fraîche", price: 4.0 },
-      { name: "Thé aux amandes", price: 7.0 },
-      { name: "Thé aux pignons", price: 12.0 },
       { name: "Infusion Camomille", price: 4.0 },
       { name: "Infusion Verveine", price: 4.0 },
       { name: "Thé vert KYUFI", price: 5.0 },
+      { name: "Thé aux amandes", price: 7.0 },
+      { name: "Thé aux pignons", price: 12.0 },
     ],
   },
   {
@@ -78,8 +78,8 @@ export const categories: MenuCategory[] = [
     items: [
       { name: "Nestlé", price: 2.5 },
       { name: "Arôme Noisette", price: 2.5 },
-      { name: "Arôme Caramel", price: 3.0 }, // Updated to 3.0
-      { name: "Arôme Cookies", price: 2.5 }, // Updated to 2.5
+      { name: "Arôme Cookies", price: 2.5 },
+      { name: "Arôme Caramel", price: 3.0 },
     ],
   },
   {
@@ -90,10 +90,10 @@ export const categories: MenuCategory[] = [
     items: [
       { name: "Iced Americano", price: 6.0 },
       { name: "Iced Latte", price: 7.0 },
-      { name: "Iced Mocha", price: 8.5 },
       { name: "Iced Chocolate", price: 8.0 },
       { name: "Expresso tonic", price: 8.0 },
       { name: "Expresso Sprite", price: 8.0 },
+      { name: "Iced Mocha", price: 8.5 },
     ],
   },
   {
@@ -132,8 +132,8 @@ export const categories: MenuCategory[] = [
     group: "Boissons froides",
     image: boissons,
     items: [
-      { name: "Soda (canette)", price: 4.0 },
       { name: "Eau 0.5L", price: 2.5 },
+      { name: "Soda (canette)", price: 4.0 },
       { name: "Eau 1L", price: 4.0 },
     ],
   },
@@ -155,8 +155,8 @@ export const categories: MenuCategory[] = [
     image: painPerdu,
     items: [
       { name: "Classique", price: 10.0, description: "Chocolat, boule de glace, amandes concassées, fruits de saison" },
-      { name: "Nutella", price: 14.0, description: "Nutella, boule de glace, amandes concassées, fruits de saison" },
       { name: "Caramel Beurre Salé", price: 10.0, description: "Caramel beurre salé, boule de glace, amandes concassées" },
+      { name: "Nutella", price: 14.0, description: "Nutella, boule de glace, amandes concassées, fruits de saison" },
       { name: "Duo cactus", price: 20.0, description: "Caramel beurre salé, chocolat, 2 boules de glace, amandes concassées" },
     ],
   },
@@ -182,9 +182,9 @@ export const categories: MenuCategory[] = [
       { name: "Chocolat", price: 10.0 },
       { name: "Nutella", price: 14.0 },
       { name: "Spéculos", price: 15.0 },
-      { name: "Pistache", price: 20.0 }, // Updated to 20.0
       { name: "Ferrero", price: 18.0 },
       { name: "Bueno", price: 18.0 },
+      { name: "Pistache", price: 20.0 },
     ],
   },
   {
@@ -228,9 +228,9 @@ export const categories: MenuCategory[] = [
       { name: "Œuf", price: 2.0 },
       { name: "Champignons", price: 2.0 },
       { name: "Amandes effilées", price: 3.0 },
-      { name: "Noisettes concassées", price: 3.5 },
       { name: "Fromage", price: 3.0 },
       { name: "Jambon", price: 3.0 },
+      { name: "Noisettes concassées", price: 3.5 },
       { name: "Thon", price: 3.5 },
     ],
   },
@@ -240,6 +240,12 @@ export const categories: MenuCategory[] = [
     group: "Petit déjeuner",
     image: formules,
     items: [
+      {
+        name: "Happy kiddos",
+        price: 10.0,
+        description:
+          "Chocolat au lait, œuf dure, mini pancake au chocolat, eau 0,5 L",
+      },
       {
         name: "Cactus start",
         price: 12.0,
@@ -252,16 +258,16 @@ export const categories: MenuCategory[] = [
           "Café, jus de fraise ou citronnade ou orange, pain perdu (ou pancake au chocolat), viennoiseries, yaourt bowl au granola, chocolat miel beurre, eau 0,5 L",
       },
       {
-        name: "Power Cactus",
-        price: 28.0,
-        description:
-          "Café, jus de fraise ou citronnade ou orange, charcuterie, fromage, omelette, bruschetta classique, eau 0,5 L",
-      },
-      {
         name: "Healthy green",
         price: 25.0,
         description:
           "Café, fresh detox, yaourt bowl au granola, 2 œufs durs crudités, charcuterie, fromages, toast complet, avocat, pancake au miel",
+      },
+      {
+        name: "Power Cactus",
+        price: 28.0,
+        description:
+          "Café, jus de fraise ou citronnade ou orange, charcuterie, fromage, omelette, bruschetta classique, eau 0,5 L",
       },
       {
         name: "Traditionnel (pour 2)",
@@ -280,12 +286,6 @@ export const categories: MenuCategory[] = [
         price: 92.0,
         description:
           "4 cafés, 4 jus de fraise ou citronnade ou orange, 4 viennoiseries, pain perdu et pancake au chocolat, 4 yaourts bowl au granola, 2 bruschetta hollandaises, charcuterie, fromages, 2 omelettes, chocolat miel beurre, 2 bouteilles d'eau 1 L",
-      },
-      {
-        name: "Happy kiddos",
-        price: 10.0,
-        description:
-          "Chocolat au lait, œuf dure, mini pancake au chocolat, eau 0,5 L",
       },
     ],
   },
